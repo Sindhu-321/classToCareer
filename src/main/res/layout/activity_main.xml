@@ -5,14 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go To Login Page"
-        android:layout_centerInParent="true"
-        android:id="@+id/loginbtn"
-        />
+        android:id="@+id/toolbar"
+
+        >
+        <include layout="@layout/snippet_main_toolbar"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go To Login Page"
+            android:layout_centerInParent="true"
+            android:id="@+id/loginbtn"
+            />
+    </RelativeLayout>
+
 
 </RelativeLayout>
